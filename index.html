@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular To-Do App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	</head>
+
+<!-- make view aware of app -->
+<body ng-app="Todo">
+	<div class="page-container" ng-controller="TodoCtrl">
+		<!-- text box updates the value of message on $scope -->
+		<input type="text" ng-model="message" />
+		<span>{{message}}</span>
+	</div>
+
+<script src="todo.js"></script>
+</body>	
+
+</html>
+
