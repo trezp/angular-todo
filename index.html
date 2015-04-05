@@ -9,11 +9,21 @@
 <!-- make view aware of app -->
 <body ng-app="Todo">
 	<div class="page-container" ng-controller="TodoCtrl">
-		<!-- text box updates the value of message on $scope -->
-		<input type="text" ng-model="message" />
-		<span>{{message}}</span>
+		<h2>Todo</h2>
+			<ul class="todo-list" ng-repeat="todo in todos track by $index">
+				<li>
+					<span>{{ todo }}</span>
+					<!-- on click, passes todo item into done function, which finds the index of the item and removes from the list -->
+					<button class="bt bt-achieve" ng-click="done(todo)">Done</button>
+				</li>
+			</ul>
+			<ul class="add-todo">
+				<li>
+					<input type="text" class="txt" placeholder="New Todo" ng-model="newTodo" ng-keyup="add($event)"/>
+				</li>
+			</ul>
 	</div>
-
+	
 <script src="todo.js"></script>
 </body>	
 
