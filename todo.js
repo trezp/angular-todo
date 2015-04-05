@@ -8,11 +8,7 @@ var app = angular.module("Todo", []);
 //names controller, defined controller logic
 //dependency injection -- scope links controller and view. Inject rather than instantiate
 app.controller('TodoCtrl', function($scope){
-	$scope.todos = [
-	'Learn Sketch',
-	'Look at Dribbble and feel inferior',
-	'Actually learn how to use the Pen tool'
-	];
+	$scope.todos = [];
 
 	$scope.done = function(todo){
 		var indexOf = $scope.todos.indexOf(todo);
